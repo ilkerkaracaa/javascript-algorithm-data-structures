@@ -106,20 +106,65 @@
 
 // console.log(hasPairWithSum([6, 3, 32, 0, 1, 7], 9));
 
-linkedlist = { value: 1, next: { value: 2, next: { value: 3, next: null } } };
+// linkedlist = { value: 1, next: { value: 2, next: { value: 3, next: null } } };
 
-function reverseLinkedList(head) {
-  let prev = null;
-  let curr = head;
-  let next = null;
+// function reverseLinkedList(head) {
+//   let prev = null;
+//   let curr = head;
+//   let next = null;
 
-  while (curr !== null) {
-    next = curr.next; // 2
-    curr.next = prev; // null
-    prev = curr; // 1
-    curr = next; // 2
+//   while (curr !== null) {
+//     next = curr.next; // 2
+//     curr.next = prev; // null
+//     prev = curr; // 1
+//     curr = next; // 2
+//   }
+//   return prev;
+// }
+
+// console.log(reverseLinkedList(linkedlist));
+
+class MyArray {
+  constructor() {
+    this.length = 0;
+    this.data = {};
   }
-  return prev;
+  get(index) {
+    return this.data[index];
+  }
+  push(item) {
+    this.data[this.length] = item;
+    this.length++;
+    return this.data;
+  }
+  pop() {
+    const lastItem = this.data[this.length - 1];
+    delete this.data[this.length - 1];
+    this.length--;
+    return lastItem;
+  }
+  deleteAtIndex(index) {
+    const item = this.data[index];
+    this.shiftItems(index);
+    return item;
+  }
+  shiftItems(index) {
+    for (let i = index; i < this.length - 1; i++) {
+      this.data[i] = this.data[i + 1];
+    }
+    console.log(this.data[this.length - 1]);
+    delete this.data[this.length - 1];
+    this.length--;
+  }
 }
 
-console.log(reverseLinkedList(linkedlist));
+const myArray = new MyArray();
+myArray.push("hi");
+myArray.push("you");
+myArray.push("!");
+myArray.pop();
+myArray.deleteAtIndex(0);
+myArray.push("are");
+myArray.push("nice");
+myArray.shiftItems(0);
+console.log(myArray);
