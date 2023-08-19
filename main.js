@@ -19,12 +19,12 @@
 // // Big O(4 + 5n) => O(n)
 
 // Given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items
-//For Example:
-//const array1 = ['a', 'b', 'c', 'x'];//const array2 = ['z', 'y', 'i'];
-//should return false.
-//-----------
-//const array1 = ['a', 'b', 'c', 'x'];//const array2 = ['z', 'y', 'x'];
-//should return true.
+// For Example:
+// const array1 = ['a', 'b', 'c', 'x'];//const array2 = ['z', 'y', 'i'];
+// should return false.
+// -----------
+// const array1 = ['a', 'b', 'c', 'x'];//const array2 = ['z', 'y', 'x'];
+// should return true.
 
 // 2 parameters - arrays - no size limit
 // return true or false
@@ -169,7 +169,7 @@
 // myArray.shiftItems(0);
 // console.log(myArray);
 
-//Create a function that reverses a string;
+// Create a function that reverses a string;
 // "Hello" --> "olleH"
 
 // function reverse(str) {
@@ -178,7 +178,7 @@
 // console.log(reverse("hi"));
 // console.log(reverse("Homosapiens"));
 
-//Create a function that concatenates two ordered arrays and reorders them
+// Create a function that concatenates two ordered arrays and reorders them
 
 // function mergeSortedArrays(arrOne, arrTwo) {
 //   return arrOne.concat(arrTwo).sort((a, b) => {
@@ -188,7 +188,7 @@
 
 // console.log(mergeSortedArrays([1, 2, 3, 1], [3, 4, 5, 6, 1]));
 
-//Solution 2
+// Solution 2
 // function mergeSortedArrays(array1, array2) {
 //   const mergedArray = [];
 //   let array1Item = array1[0];
